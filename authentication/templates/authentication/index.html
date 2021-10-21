@@ -7,6 +7,9 @@
     <title>Authentication</title>
 </head>
 <body>
+    <button  type="submit"><a class="deco" href="/signout">SignOut</a></button>
+    <button type="submit"><a  class="deco" href="/signup">SignUp</a> </button>
+    <button type="submit"><a  class="deco" href="/signin">SignIn</a></button>
     
     {% for message in messages %}
     <div class="alert alert.{{ message.tags}} alert-dismissible fade show" role="alert"  >
@@ -20,8 +23,7 @@
     <h1>Welcome to glow and glamour</h1>
 
     {% if user.is_authenticated %}
-    <!-- <h2>Hello {{ fname }}</h2> -->
-    <!-- <h3> You are successfully logged in</h3> -->
+
     <button  type="submit"><a class="deco" href="/signout">SignOut</a></button>
     <button type="submit"><a  class="deco" href="/signup">SignUp</a> </button>
     <button type="submit"><a  class="deco" href="/signin">SignIn</a></button>
@@ -42,7 +44,7 @@
     margin-left: 10px;
     text-decoration: none;
     font-size: 18px;
-    margin-top: -40px;
+    margin-top: -5px;
 
     
     }

@@ -55,6 +55,7 @@ def signup(request):
         myuser.is_active=False
 
         myuser.save()
+                    
 
         messages.success(request,'Your account has been created successfully. We have sent you a confirmation email,please confirm your email in order to activate your account')
 
