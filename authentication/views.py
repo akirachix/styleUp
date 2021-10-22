@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from fashion import settings
 from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode
@@ -33,7 +34,7 @@ def signup(request):
         pass2=request.POST['pass2']
 
         if User.objects.filter(username=username):
-            messages.error(request,'The username you entered is already in use')
+            messages.error(request,'Your account has been created successfully')
             return redirect('home')
         
         if User.objects.filter(email=email):
@@ -129,6 +130,5 @@ def activate(request,uidb64,token):
     else:
         return render(request,'activation_failed.html')
 
-  
 
 # Create your views here.
