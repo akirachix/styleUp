@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authentication',
     'core',
+    'product',
 ]
 
 MIDDLEWARE = [
@@ -89,11 +90,11 @@ WSGI_APPLICATION = 'fashion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'styleup',
-        'USER': 'fashion',
-        'PASSWORD': 'styleup2021',
+        'NAME': 'fashion',
+        'USER': 'sandra',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
