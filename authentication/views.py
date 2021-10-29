@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
@@ -55,7 +56,7 @@ def signup(request):
         myuser.is_active=False
 
         myuser.save()
-
+                    
 
         messages.success(request,'Your account has been created successfully. We have sent you a confirmation email,please confirm your email in order to activate your account')
 
@@ -66,7 +67,7 @@ def signup(request):
         from_email= settings.EMAIL_HOST_USER
         to_list=[myuser.email]
         send_mail(subject,message,from_email,to_list, fail_silently=True)
-
+         
         #  Email address confirmation Email
 
         current_site=get_current_site(request)
@@ -120,7 +121,7 @@ def activate(request,uidb64,token):
         myuser=User.objects.get(pk=uid)
     except(TypeError,ValueError,OverflowError,User.DoesNotExist):
         myuser=None
-
+    
     if myuser is not None and generate_token.check_token(myuser,token):
         myuser.is_active=True
         myuser.save()
