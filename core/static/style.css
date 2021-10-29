@@ -143,7 +143,7 @@ button[type=submit] {
       }
       .footer-col h1{
         font-size: 18px;
-        color:black;
+        /* color:black; */
         text-transform: capitalize;
         margin-bottom: 30px;
         font-weight: 500;
@@ -154,7 +154,7 @@ button[type=submit] {
         position: absolute;
         left: 0;
         bottom: -10px;
-        background-color:black;
+        /* background-color:black; */
         height: 2px;
         box-sizing:border-box ;
         width: 50px;
@@ -222,4 +222,5 @@ button[type=submit] {
     h2{
         font-size: 20px;
     }
+    
    
