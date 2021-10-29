@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
 </head>
 <body>
     
@@ -21,6 +21,7 @@
     <h1>Sign In</h1>
 
    <form action="/signin" method="post">
+        {{ form }}
         {% csrf_token %} 
         <label for="">Username</label>
         <input type="text" id="username" name="username" placeholder="create a username", required>
@@ -32,35 +33,60 @@
        <button type="submit">SignIn</button>
     </form>
     <style>
-        body, html {
-            background: plum;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
+input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 1px;
   box-sizing: border-box;
 }
 
-input[type=text], [type=password] {
-  padding:10px;
-  border:0;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 5px;
-  width:25%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
+input[type=password] {
+ width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 1px;
+  box-sizing: border-box;
+  color: gainsboro;
+
 }
-  
 form{
-    background: powderblue;
-    border-radius: 5px;
-    width: 75%;
-  
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    
+}
+h1{
+    text-align: center;
+}
+button{
+  background-color: #DFC5DD; 
+  border: none;
+  color:black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+    
+}
+input,label{
+    display:block;
+    margin-left: 1%;
+}
+label{
+    text-align: justify;
+    margin-left: 37.5%;
+    font-size: 18px;
 }
 
-    </style>
-    
+
+
+</style>
+   
+  
 </body>
 </html>

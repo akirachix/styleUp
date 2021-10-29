@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
@@ -7,11 +6,12 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from fashion import settings
 from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes,force_text
-from . tokens import generate_token
+from .tokens import generate_token
 from django.core.mail import EmailMessage
 from django.utils.http import urlsafe_base64_decode
 
@@ -33,7 +33,7 @@ def signup(request):
         pass2=request.POST['pass2']
 
         if User.objects.filter(username=username):
-            messages.error(request,'The username you entered is already in use')
+            messages.error(request,'Your account has been created successfully')
             return redirect('home')
         
         if User.objects.filter(email=email):
@@ -56,6 +56,7 @@ def signup(request):
 
         myuser.save()
 
+
         messages.success(request,'Your account has been created successfully. We have sent you a confirmation email,please confirm your email in order to activate your account')
 
         # Thankyou email
@@ -65,7 +66,7 @@ def signup(request):
         from_email= settings.EMAIL_HOST_USER
         to_list=[myuser.email]
         send_mail(subject,message,from_email,to_list, fail_silently=True)
-         
+
         #  Email address confirmation Email
 
         current_site=get_current_site(request)
@@ -119,7 +120,7 @@ def activate(request,uidb64,token):
         myuser=User.objects.get(pk=uid)
     except(TypeError,ValueError,OverflowError,User.DoesNotExist):
         myuser=None
-    
+
     if myuser is not None and generate_token.check_token(myuser,token):
         myuser.is_active=True
         myuser.save()
@@ -128,6 +129,5 @@ def activate(request,uidb64,token):
     else:
         return render(request,'activation_failed.html')
 
-  
 
 # Create your views here.
