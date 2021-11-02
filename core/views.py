@@ -5,7 +5,7 @@ from django.core .paginator import Page, Paginator
 
 # Create your views here.
 
-def index(request):
+def base(request):
     product_objects = Products.objects.all()
 
      #search
