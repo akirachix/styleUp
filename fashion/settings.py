@@ -48,9 +48,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication',
-    'core',
-    'product',
+    'accounts',
+    'shop',
+    'search_app',
+    'wish', 
+    'cart',  
+    'order', 
+    'stripe',
    
 ]
 
@@ -141,6 +145,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 MEDIA_ROOT='Images/'
 STASTIC_ROOT=os.path.join(BASE_DIR,'static/Images')
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR,'static','media')
+
+# STRIPE_PUBLISHABLE_KEY = 'pk_test_FxqJcM5pDsQYvjqvomn1HTO3'
+# STRIPE_SECRET_KEY = 'sk_test_raf6Azr4OiG3htCp5SCYpYO6' 
 
 
 # Default primary key field type
