@@ -37,4 +37,3 @@ if settings.DEBUG: #mapping static and media url when debug is enabled
 admin.site.site_header = "Glow and Glamour"
 admin.site.site_title = "Glow and Glamour Admin Portal"
 admin.site.index_title = "Welcome to Glow and Glamour"
-

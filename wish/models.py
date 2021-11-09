@@ -15,8 +15,8 @@ class Wish(models.Model):
 
 
 class WishItem(models.Model):
-	product = models.ForeignKey(Product, on_delete=models.CASCADE) 
-	wish = models.ForeignKey(Wish, on_delete=models.CASCADE)
+	product = models.ForeignKey(Product, on_delete=models.CASCADE,blank=True,null=True) 
+	wish = models.ForeignKey(Wish, on_delete=models.CASCADE,blank=True,null=True)
 	quantity = models.IntegerField(default="1")
 	price = models.IntegerField(default="0")
 	

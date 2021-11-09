@@ -49,13 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'shop',
+    'cart',
+    'order',
+    'wish',
     'search_app',
-    'wish', 
-    'cart',  
-    'order', 
-    'stripe',
-   
+    'shop',
 ]
 
 MIDDLEWARE = [
