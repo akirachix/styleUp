@@ -24,8 +24,8 @@
 						<th>Product Image</th>
 						<th>Product Name</th>
                         <th>Product Rate</th>
-						<th>Quantity</th>
 						<th>Price</th>
+						<th>Quantity</th>
 						<th>Remove</th>
 					</tr>
 				</thead>
@@ -45,7 +45,7 @@
 							    </div>
 							    {% else %}
 								<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-									<a href="{% url 'cart:cart_remove' cart_item.product.id %}"><button type="button"  class="btn btn-danger">-</button></a>
+									<a href="{% url 'cart:cart_remove' cart_item.product.id %}"><button type="button"  class="btn btn-success">-</button></a>
 									<button type="button" class="btn btn-warning">{{ cart_item.quantity }}</button>
 									<a href="#"><button type="button"  class="btn btn-success disabled" tabindex="-1" aria-disabled="true" data-bs-toggle="button">+</button></a>
 									</div>

@@ -13,7 +13,7 @@
 	{% if category %}
 		{{ category.name }} - StyleUp
 	{% else %}
-       Smart Outfits
+       Glow and Glamour
 	{% endif %}
 {% endblock %}
 
@@ -65,7 +65,7 @@
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
 			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			  <!-- <span class="visually-hidden">Previous</span> -->
+			 <span class="visually-hidden">Previous</span> -->
 			<!-- </a>
 			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
 			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -95,7 +95,7 @@
 			{% for product in products.object_list %}
 				<div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4"> 
 					<div class="card text-center" style="min-width: 18rem;"> 
-						<h2><span class="badge rounded-pill bg-primary float-right">Flat{{product.discount}}% OFF</span></h2>
+						<!-- <h2><span class="badge rounded-pill bg-primary float-right">Flat{{product.discount}}% OFF</span></h2> -->
 						<a href="{{ product.get_url }}"> <img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}" height="400px" > </a> 
 
 

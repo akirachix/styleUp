@@ -57,7 +57,7 @@ def cart_detail(request, total=0, counter=0, additem=0, cart_items=None):
 
     stripe.api_key = settings.STRIPE_SECRET_KEY  
     stripe_total = int(total * 100)
-    description = 'Smart Retail Solutions - New Order'
+    description = 'Glow and Glamour - New Order'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
     if request.method == 'POST':  
         try:
@@ -152,10 +152,10 @@ def sendEmail(order_id):
     order_items = OrderItem.objects.filter(order=transaction)
     try:
         '''Sending the order'''
-        subject = "Smart Retail Solutions - New Order #{}".format(
+        subject = " Glow and Glamour - New Order #{}".format(
             transaction.id)  
         to = ['{}'.format(transaction.emailAddress)]
-        from_email = "orders@smartretailsolutions.com"
+        from_email = "orders@groupstyleup@gmail.com"
         order_information = {
             'transaction': transaction,
             'order_items': order_items
