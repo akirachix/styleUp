@@ -9,6 +9,10 @@ class Category(models.Model):
 	slug = models.SlugField(max_length=250,unique=True)
 	description = models.TextField(blank=True)
 	image = models.ImageField(upload_to='category',blank=True) 
+
+
+	# pair_with = models.ManyToManyField(User ,related_name='favourite',blank=True)
+
 	class Meta:
 		ordering = ('name',)
 		verbose_name = 'category'
