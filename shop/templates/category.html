@@ -47,7 +47,7 @@
 	</div>
 	{% else %}
 	
-		<!--<img class="my_image my_image_padding" src="{% static 'img/h1.jpg' %}" alt="Our Products Collection" >-->
+		<!-- <img class="my_image my_image_padding" src="{% static 'img/h1.jpg' %}" alt="Our Products Collection" >-->
 		<!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 			  <div class="carousel-item active">
@@ -74,7 +74,7 @@
 		  </div>
 		 
 	</div> -->
-	<img  src="http://iwantyoutoknow.co.uk/wp-content/uploads/2018/03/new-combo.jpg" width="100%" >
+	<img  src="https://media.istockphoto.com/photos/beauty-portrait-of-afro-woman-girl-looking-at-camera-picture-id1311080961?b=1&k=20&m=1311080961&s=170667a&w=0&h=hdDZrLIMLfXoewravzvt6N2OJA6ptu1ZIbRuNei7jbE=" width="100%" >
 	<br>
 
 
@@ -95,7 +95,6 @@
 			{% for product in products.object_list %}
 				<div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4"> 
 					<div class="card text-center" style="min-width: 18rem;"> 
-						<!-- <h2><span class="badge rounded-pill bg-primary float-right">Flat{{product.discount}}% OFF</span></h2> -->
 						<a href="{{ product.get_url }}"> <img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}" height="400px" > </a> 
 
 
